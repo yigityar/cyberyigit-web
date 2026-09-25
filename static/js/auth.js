@@ -1,45 +1,60 @@
-// Supabase Yapılandırması
-const SUPABASE_URL = "https://snemhwusjsuphxetxnyj.supabase.co";
-const SUPABASE_ANON_KEY = "sb_publishable_LfVBEDGqsBwlIVLOexP6lQ_Ty9DHRX1"
-const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const SUPABASE_URL = "BURAYA_SUPABASE_PROJECT_URL_YAZIN";
+const SUPABASE_ANON_KEY = "BURAYA_SUPABASE_ANON_KEY_YAZIN";
 
-// Kullanıcı Oturum Kontrolü
+const supabase = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
+
+// Modal Aç/Kapat
+function openAuthModal() {
+  const modal = document.getElementById("auth-modal");
+  if (modal) modal.style.display = "flex";
+}
+function closeAuthModal() {
+  const modal = document.getElementById("auth-modal");
+  if (modal) modal.style.display = "none";
+}
+
+// Oturum Kontrolü
 async function checkUserSession() {
+  if (!supabase) return;
   const { data: { session } } = await supabase.auth.getSession();
-  const authNav = document.getElementById("auth-nav-container");
+  
+  // Hugo menüsündeki Giriş Yap linkini bul (url = #giris)
+  const authLinks = document.querySelectorAll('a[href*="#giris"]');
   const protectedContent = document.getElementById("protected-content");
   const guestWarning = document.getElementById("guest-warning");
 
   if (session && session.user) {
-    if (authNav) {
-      authNav.innerHTML = `
-        <span class="text-xs font-mono text-cyan-400 mr-2">${session.user.email}</span>
-        <button onclick="handleLogout()" class="text-xs font-mono px-2 py-1 rounded border border-red-500/40 text-red-400 hover:bg-red-500 hover:text-white transition">Çıkış</button>
-      `;
-    }
+    authLinks.forEach(link => {
+      link.innerHTML = `<span style="color:#22d3ee; margin-right:8px;">${session.user.email}</span><span style="color:#f87171; text-decoration:underline; cursor:pointer;" onclick="handleLogout(event)">[Çıkış]</span>`;
+      link.removeAttribute("href");
+    });
+
     if (protectedContent) protectedContent.classList.remove("hidden");
     if (guestWarning) guestWarning.classList.add("hidden");
   } else {
-    if (authNav) {
-      authNav.innerHTML = `
-        <button onclick="openAuthModal()" class="text-xs font-mono px-3 py-1 rounded border border-cyan-500/50 text-cyan-400 hover:bg-cyan-500 hover:text-black transition">Giriş Yap</button>
-      `;
-    }
+    authLinks.forEach(link => {
+      link.innerText = "Giriş Yap";
+      link.onclick = (e) => {
+        e.preventDefault();
+        openAuthModal();
+      };
+    });
+
     if (protectedContent) protectedContent.classList.add("hidden");
     if (guestWarning) guestWarning.classList.remove("hidden");
   }
 }
 
-// Giriş Yapma
+// Giriş
 async function handleLogin(email, password) {
   const statusEl = document.getElementById("auth-status");
   statusEl.innerText = "Giriş yapılıyor...";
-  statusEl.className = "text-xs font-mono text-cyan-400 mb-2";
+  statusEl.style.color = "#22d3ee";
 
   const { data, error } = await supabase.auth.signInWithPassword({ email, password });
   if (error) {
     statusEl.innerText = "Hata: " + error.message;
-    statusEl.className = "text-xs font-mono text-red-400 mb-2";
+    statusEl.style.color = "#f87171";
   } else {
     statusEl.innerText = "Başarılı!";
     closeAuthModal();
@@ -47,48 +62,28 @@ async function handleLogin(email, password) {
   }
 }
 
-// Kayıt Olma
+// Kayıt
 async function handleRegister(email, password) {
   const statusEl = document.getElementById("auth-status");
   statusEl.innerText = "Kayıt oluşturuluyor...";
-  statusEl.className = "text-xs font-mono text-cyan-400 mb-2";
+  statusEl.style.color = "#22d3ee";
 
   const { data, error } = await supabase.auth.signUp({ email, password });
   if (error) {
     statusEl.innerText = "Hata: " + error.message;
-    statusEl.className = "text-xs font-mono text-red-400 mb-2";
+    statusEl.style.color = "#f87171";
   } else {
-    statusEl.innerText = "Kayıt başarılı! E-posta onay linki gönderildi.";
-    statusEl.className = "text-xs font-mono text-green-400 mb-2";
+    statusEl.innerText = "Kayıt başarılı! E-postanızı kontrol edin.";
+    statusEl.style.color = "#4ade80";
   }
 }
 
 // Çıkış
-async function handleLogout() {
+async function handleLogout(e) {
+  if (e) e.preventDefault();
   await supabase.auth.signOut();
   window.location.reload();
 }
 
-// Modal Yönetimi
-function openAuthModal() {
-  document.getElementById("auth-modal").classList.remove("hidden");
-}
-function closeAuthModal() {
-  document.getElementById("auth-modal").classList.add("hidden");
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  checkUserSession();
-});
-
-// Nav çubuğuna otomatik buton enjekte et
-document.addEventListener("DOMContentLoaded", () => {
-  const navMenu = document.querySelector("#menu");
-  if (navMenu && !document.getElementById("auth-nav-container")) {
-    const li = document.createElement("li");
-    li.id = "auth-nav-container";
-    li.className = "flex items-center ml-4";
-    navMenu.appendChild(li);
-    checkUserSession();
-  }
-});
+// Sayfa yüklendiğinde çalıştır
+window.addEventListener("load", checkUserSession);

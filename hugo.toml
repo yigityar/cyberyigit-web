@@ -27,13 +27,13 @@ url = "/posts/"
 weight = 10
 
 [[menu.main]]
-identifier = "categories"
-name = "Kategoriler"
-url = "/categories/"
-weight = 20
-
-[[menu.main]]
 identifier = "about"
 name = "Hakkımda & Hizmetler"
 url = "/about/"
+weight = 20
+
+[[menu.main]]
+identifier = "auth"
+name = "Giriş Yap"
+url = "#giris"
 weight = 30

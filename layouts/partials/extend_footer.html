@@ -1,24 +1,23 @@
-<!-- Giriş / Kayıt Modal Penceresi -->
-<div id="auth-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
-  <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 max-w-sm w-full relative shadow-2xl">
-    <button onclick="closeAuthModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg">&times;</button>
-    <h3 class="text-lg font-bold text-white mb-2 font-mono text-cyan-400">CyberYigit Portal</h3>
-    <p class="text-xs text-slate-400 mb-4">Özel lab notları ve dokümanlara erişmek için giriş yapın.</p>
+<div id="auth-modal" style="display:none; position:fixed; inset:0; z-index:99999; background:rgba(0,0,0,0.85); align-items:center; justify-content:center; padding:1rem;">
+  <div style="background:#0f172a; border:1px solid #1e293b; border-radius:12px; padding:24px; max-width:380px; width:100%; position:relative; box-shadow:0 20px 25px -5px rgba(0,0,0,0.5);">
+    <button onclick="closeAuthModal()" style="position:absolute; top:12px; right:16px; color:#94a3b8; font-size:20px; background:none; border:none; cursor:pointer;">&times;</button>
+    <h3 style="color:#22d3ee; font-family:monospace; font-size:18px; font-weight:bold; margin-bottom:6px;">CyberYigit Portal</h3>
+    <p style="color:#94a3b8; font-size:12px; margin-bottom:16px;">Özel laboratuvar notlarına erişmek için giriş yapın.</p>
     
-    <div id="auth-status"></div>
+    <div id="auth-status" style="font-size:12px; font-family:monospace; margin-bottom:10px;"></div>
 
-    <form onsubmit="event.preventDefault();" class="space-y-3">
+    <form onsubmit="event.preventDefault();" style="display:flex; flex-direction:column; gap:12px;">
       <div>
-        <label class="block text-xs font-mono text-slate-400 mb-1">E-POSTA</label>
-        <input type="email" id="auth-email" required class="w-full px-3 py-2 rounded bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:border-cyan-500">
+        <label style="display:block; font-size:11px; font-family:monospace; color:#94a3b8; margin-bottom:4px;">E-POSTA</label>
+        <input type="email" id="auth-email" required style="width:100%; padding:8px 12px; background:#020617; border:1px solid #334155; border-radius:6px; color:#fff; font-size:14px; box-sizing:border-box;">
       </div>
       <div>
-        <label class="block text-xs font-mono text-slate-400 mb-1">PAROLA</label>
-        <input type="password" id="auth-password" required class="w-full px-3 py-2 rounded bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:border-cyan-500">
+        <label style="display:block; font-size:11px; font-family:monospace; color:#94a3b8; margin-bottom:4px;">PAROLA</label>
+        <input type="password" id="auth-password" required style="width:100%; padding:8px 12px; background:#020617; border:1px solid #334155; border-radius:6px; color:#fff; font-size:14px; box-sizing:border-box;">
       </div>
-      <div class="flex gap-2 pt-2">
-        <button type="button" onclick="handleLogin(document.getElementById('auth-email').value, document.getElementById('auth-password').value)" class="flex-1 py-2 rounded bg-cyan-500 text-black text-xs font-semibold hover:bg-cyan-400 transition">Giriş Yap</button>
-        <button type="button" onclick="handleRegister(document.getElementById('auth-email').value, document.getElementById('auth-password').value)" class="flex-1 py-2 rounded border border-slate-700 bg-slate-800 text-slate-300 text-xs font-semibold hover:border-slate-500 transition">Kayıt Ol</button>
+      <div style="display:flex; gap:8px; margin-top:6px;">
+        <button type="button" onclick="handleLogin(document.getElementById('auth-email').value, document.getElementById('auth-password').value)" style="flex:1; padding:10px; background:#22d3ee; color:#000; font-weight:bold; font-size:12px; border:none; border-radius:6px; cursor:pointer;">Giriş Yap</button>
+        <button type="button" onclick="handleRegister(document.getElementById('auth-email').value, document.getElementById('auth-password').value)" style="flex:1; padding:10px; background:#1e293b; color:#cbd5e1; font-weight:bold; font-size:12px; border:1px solid #475569; border-radius:6px; cursor:pointer;">Kayıt Ol</button>
       </div>
     </form>
   </div>
