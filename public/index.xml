@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>CyberYigit | Siber Güvenlik &amp; Lab Notları</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on CyberYigit | Siber Güvenlik &amp; Lab Notları</description>
+    <generator>Hugo</generator>
+    <language>tr-tr</language>
+    <lastBuildDate>Fri, 25 Sep 2026 17:00:00 +0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Siber Güvenliğin Temeli: CIA Triad (Gizlilik, Bütünlük, Erişilebilirlik)</title>
+      <link>http://localhost:1313/posts/cia-triad/</link>
+      <pubDate>Fri, 25 Sep 2026 17:00:00 +0300</pubDate>
+      <guid>http://localhost:1313/posts/cia-triad/</guid>
+      <description>&lt;p&gt;Siber güvenlik operasyonlarında karşılaşılan her saldırı ve uygulanan her savunma mekanizması, temelde &lt;strong&gt;CIA Triad&lt;/strong&gt; (Gizlilik, Bütünlük, Erişilebilirlik) üçlüsünden en az birini hedef alır veya korur.&lt;/p&gt;
+&lt;h3 id=&#34;1-confidentiality-gizlilik&#34;&gt;1. Confidentiality (Gizlilik)&lt;/h3&gt;
+&lt;p&gt;Verinin yalnızca yetkilendirilmiş kişiler, süreçler veya cihazlar tarafından erişilebilir olmasıdır.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Tehditler:&lt;/strong&gt; Ağ dinleme (sniffing), veri sızıntıları, MITM (Ortadaki Adam) saldırıları.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Savunma Mekanizmaları:&lt;/strong&gt; Güçlü şifreleme algoritmaları (AES-256), çok faktörlü kimlik doğrulama (MFA) ve rol tabanlı erişim kontrolü (RBAC).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-integrity-bütünlük&#34;&gt;2. Integrity (Bütünlük)&lt;/h3&gt;
+&lt;p&gt;Verinin ve sistemlerin yetkisiz kişilerce değiştirilmediğinin, silinmediğinin veya tahrif edilmediğinin güvence altına alınmasıdır.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hakkımda &amp; Danışmanlık</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Fri, 25 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;h3 id=&#34;mühendislik-odaklı-güvenlik-yaklaşımı&#34;&gt;Mühendislik Odaklı Güvenlik Yaklaşımı&lt;/h3&gt;
+&lt;p&gt;CyberYigit, siber güvenlik araştırmalarını, zararlı yazılım analizlerini ve ağ savunma tekniklerini pratik laboratuvar ortamında test eden ve belgeleyen bağımsız bir platformdur.&lt;/p&gt;
+&lt;p&gt;Burada yayınlanan tüm içerikler &amp;ldquo;Public Learning&amp;rdquo; (Açıkta Öğrenme) vizyonuyla hazırlanmış saha ve lab notlarından oluşur.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;kurumsal-hizmet-alanları&#34;&gt;Kurumsal Hizmet Alanları&lt;/h3&gt;
+&lt;p&gt;İhtiyaç halinde kurumlar ve KOBİ&amp;rsquo;ler için aşağıdaki alanlarda bağımsız teknik danışmanlık sağlanmaktadır:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Penetrasyon Testi (Pentest):&lt;/strong&gt; Ağ, web uygulamaları ve servis zafiyetlerinin saldırgan gözüyle tespiti ve raporlanması.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Olay Müdahalesi (DFIR):&lt;/strong&gt; Ransomware ve veri ihlali durumlarında acil durum analizi, sistem izolasyonu ve kök neden tespiti (RCA).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Adli Bilişim Uzman Raporlaması:&lt;/strong&gt; Kurum içi veri hırsızlığı ve teknik uyuşmazlıklarda adli delil zincirine uygun analiz.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;İletişim için: &lt;strong&gt;&lt;a href=&#34;mailto:iletisim@cyberyigit.com&#34;&gt;iletisim@cyberyigit.com&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

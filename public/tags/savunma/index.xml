@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Savunma on CyberYigit | Siber Güvenlik &amp; Lab Notları</title>
+    <link>http://localhost:1313/tags/savunma/</link>
+    <description>Recent content in Savunma on CyberYigit | Siber Güvenlik &amp; Lab Notları</description>
+    <generator>Hugo</generator>
+    <language>tr-tr</language>
+    <lastBuildDate>Fri, 25 Sep 2026 17:00:00 +0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/savunma/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Siber Güvenliğin Temeli: CIA Triad (Gizlilik, Bütünlük, Erişilebilirlik)</title>
+      <link>http://localhost:1313/posts/cia-triad/</link>
+      <pubDate>Fri, 25 Sep 2026 17:00:00 +0300</pubDate>
+      <guid>http://localhost:1313/posts/cia-triad/</guid>
+      <description>&lt;p&gt;Siber güvenlik operasyonlarında karşılaşılan her saldırı ve uygulanan her savunma mekanizması, temelde &lt;strong&gt;CIA Triad&lt;/strong&gt; (Gizlilik, Bütünlük, Erişilebilirlik) üçlüsünden en az birini hedef alır veya korur.&lt;/p&gt;
+&lt;h3 id=&#34;1-confidentiality-gizlilik&#34;&gt;1. Confidentiality (Gizlilik)&lt;/h3&gt;
+&lt;p&gt;Verinin yalnızca yetkilendirilmiş kişiler, süreçler veya cihazlar tarafından erişilebilir olmasıdır.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Tehditler:&lt;/strong&gt; Ağ dinleme (sniffing), veri sızıntıları, MITM (Ortadaki Adam) saldırıları.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Savunma Mekanizmaları:&lt;/strong&gt; Güçlü şifreleme algoritmaları (AES-256), çok faktörlü kimlik doğrulama (MFA) ve rol tabanlı erişim kontrolü (RBAC).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-integrity-bütünlük&#34;&gt;2. Integrity (Bütünlük)&lt;/h3&gt;
+&lt;p&gt;Verinin ve sistemlerin yetkisiz kişilerce değiştirilmediğinin, silinmediğinin veya tahrif edilmediğinin güvence altına alınmasıdır.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

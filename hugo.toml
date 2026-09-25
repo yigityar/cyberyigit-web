@@ -1,0 +1,39 @@
+baseURL = 'https://cyberyigit.com/'
+languageCode = 'tr-tr'
+title = 'CyberYigit | Siber Güvenlik & Lab Notları'
+theme = 'PaperMod'
+
+[pagination]
+pagerSize = 10
+
+[params]
+env = 'production'
+description = "Siber güvenlik araştırmaları, DFIR, sızma testi ve teknik lab notları."
+author = "Yiğit"
+defaultTheme = "dark"
+disableThemeToggle = false
+ShowReadingTime = true
+ShowShareButtons = false
+ShowCodeCopyButtons = true
+
+[params.homeInfoParams]
+Title = "CyberYigit 🛡️"
+Content = "Siber güvenlik araştırmaları, hands-on lab notları ve dijital adli bilişim analizleri. Sistemlerin nasıl çalıştığını, nasıl kırıldığını ve nasıl savunulduğunu belgeliyorum. Kurumsal sızma testi ve olay müdahalesi danışmanlığı için iletişim kurabilirsiniz."
+
+[[menu.main]]
+identifier = "posts"
+name = "Lab Notları"
+url = "/posts/"
+weight = 10
+
+[[menu.main]]
+identifier = "categories"
+name = "Kategoriler"
+url = "/categories/"
+weight = 20
+
+[[menu.main]]
+identifier = "about"
+name = "Hakkımda & Hizmetler"
+url = "/about/"
+weight = 30
