@@ -3,8 +3,10 @@ languageCode = 'tr-tr'
 title = 'CyberYigit | Siber Güvenlik & Lab Notları'
 theme = 'PaperMod'
 
-[pagination]
-pagerSize = 10
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 [params]
 env = 'production'
