@@ -13,12 +13,22 @@
   <header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur fixed w-full z-50">
     <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
       <a href="#" class="text-xl font-bold tracking-wider text-cyan-400 font-mono">CyberYigit<span class="text-slate-400">.com</span></a>
-      <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
-        <a href="#hizmetler" class="hover:text-cyan-400 transition">Hizmetler</a>
-        <a href="#hakkimizda" class="hover:text-cyan-400 transition">Hakkımızda</a>
-        <a href="#iletisim" class="hover:text-cyan-400 transition">İletişim</a>
-      </nav>
-      <a href="#iletisim" class="text-xs uppercase tracking-widest font-semibold px-4 py-2 rounded border border-cyan-500/50 text-cyan-400 hover:bg-cyan-500 hover:text-black transition">Müdahale Talep Et</a>
+      
+      <div class="flex items-center space-x-6">
+        <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+          <a href="#hizmetler" class="hover:text-cyan-400 transition">Hizmetler</a>
+          <a href="#hakkimizda" class="hover:text-cyan-400 transition">Hakkımızda</a>
+          <a href="#iletisim" class="hover:text-cyan-400 transition">İletişim</a>
+        </nav>
+
+        <!-- Language Switcher -->
+        <div class="flex items-center text-xs font-mono border border-slate-700 rounded-md overflow-hidden bg-slate-900">
+          <span class="px-2.5 py-1 bg-cyan-500 text-black font-semibold">TR</span>
+          <a href="/en" class="px-2.5 py-1 text-slate-400 hover:text-white transition">EN</a>
+        </div>
+
+        <a href="#iletisim" class="hidden sm:inline-block text-xs uppercase tracking-widest font-semibold px-4 py-2 rounded border border-cyan-500/50 text-cyan-400 hover:bg-cyan-500 hover:text-black transition">Müdahale Talep Et</a>
+      </div>
     </div>
   </header>
 
@@ -49,7 +59,6 @@
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
-        <!-- Kart 1 -->
         <div class="p-8 rounded-xl border border-slate-800 bg-slate-900/40 hover:border-cyan-500/50 transition">
           <div class="w-10 h-10 rounded bg-cyan-950 flex items-center justify-center text-cyan-400 font-mono font-bold mb-6">01</div>
           <h3 class="text-xl font-bold text-white mb-3">Penetrasyon Testi (Pentest)</h3>
@@ -57,7 +66,6 @@
             Web, mobil ve ağ altyapılarınızdaki zafiyetleri saldırganlardan önce tespit eden, uluslararası standartlara uygun sızma testleri ve aksiyon raporları.
           </p>
         </div>
-        <!-- Kart 2 -->
         <div class="p-8 rounded-xl border border-slate-800 bg-slate-900/40 hover:border-cyan-500/50 transition">
           <div class="w-10 h-10 rounded bg-cyan-950 flex items-center justify-center text-cyan-400 font-mono font-bold mb-6">02</div>
           <h3 class="text-xl font-bold text-white mb-3">Olay Müdahalesi (DFIR)</h3>
@@ -65,7 +73,6 @@
             Fidye yazılımı (ransomware) ve veri sızıntısı durumlarında anında kriz yönetimi, izole etme, adli delil toplama ve kök neden analizi (RCA).
           </p>
         </div>
-        <!-- Kart 3 -->
         <div class="p-8 rounded-xl border border-slate-800 bg-slate-900/40 hover:border-cyan-500/50 transition">
           <div class="w-10 h-10 rounded bg-cyan-950 flex items-center justify-center text-cyan-400 font-mono font-bold mb-6">03</div>
           <h3 class="text-xl font-bold text-white mb-3">Adli Bilişim & Raporlama</h3>
@@ -95,7 +102,6 @@
       <p class="text-slate-400 text-sm mb-8">Projeleriniz veya acil durum talepleriniz için mesaj bırakın, en kısa sürede dönüş sağlayalım.</p>
 
       <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4 text-left">
-        <!-- Web3Forms ücretsiz access_key buraya gelecek -->
         <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
         <div>
           <label class="block text-xs font-mono text-slate-400 mb-2">AD SOYAD / KURUM</label>
@@ -114,7 +120,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="border-t border-slate-900 py-8 text-center text-xs text-slate-500 font-mono">
     &copy; 2026 CyberYigit. Tüm hakları saklıdır.
   </footer>
