@@ -3,10 +3,14 @@ const SUPABASE_ANON_KEY = "sb_publishable_LfVBEDGqsBwlIVLOexP6lQ_Ty9DHRX1"; cons
   ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) 
   : null;
 
-// Global Aç/Kapat Fonksiyonları
+// Modal Aç/Kapat
 window.openAuthModal = function() {
   const modal = document.getElementById("auth-modal");
-  if (modal) modal.style.display = "flex";
+  if (modal) {
+    modal.style.display = "flex";
+  } else {
+    console.error("Auth modal elementi bulunamadı!");
+  }
 };
 
 window.closeAuthModal = function() {
@@ -16,7 +20,7 @@ window.closeAuthModal = function() {
 
 // Global Giriş Fonksiyonu
 window.doLogin = async function() {
-  if (!supabase) return alert("Supabase baglantisi yapilandirilmadi.");
+  if (!supabase) return alert("Supabase bağlantısı henüz yapılandırılmadı.");
   const email = document.getElementById("auth-email").value;
   const password = document.getElementById("auth-password").value;
   const status = document.getElementById("auth-status");
@@ -36,7 +40,7 @@ window.doLogin = async function() {
 
 // Global Kayıt Fonksiyonu
 window.doRegister = async function() {
-  if (!supabase) return alert("Supabase baglantisi yapilandirilmadi.");
+  if (!supabase) return alert("Supabase bağlantısı henüz yapılandırılmadı.");
   const email = document.getElementById("auth-email").value;
   const password = document.getElementById("auth-password").value;
   const status = document.getElementById("auth-status");
@@ -55,17 +59,20 @@ window.doRegister = async function() {
 
 // Global Çıkış Fonksiyonu
 window.doLogout = async function(e) {
-  if (e) e.preventDefault();
+  if (e) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
   if (supabase) await supabase.auth.signOut();
   window.location.reload();
 };
 
-// Oturum Kontrolü
+// Oturum Kontrolü & Menü Güncelleme
 async function checkAuth() {
   if (!supabase) return;
   const { data: { session } } = await supabase.auth.getSession();
   
-  const authLinks = document.querySelectorAll('a[href*="openAuthModal"]');
+  const authLinks = document.querySelectorAll('a[href*="#login"]');
   const protectedContent = document.getElementById("protected-content");
   const guestWarning = document.getElementById("guest-warning");
 
@@ -82,10 +89,21 @@ async function checkAuth() {
   }
 }
 
-// Modal dışına tıklandığında kapatma
-window.addEventListener("click", (e) => {
+// Global Tıklama Yakalayıcı (Event Delegation)
+document.addEventListener("click", (e) => {
+  // #login linkine tıklandıysa modalı aç
+  const target = e.target.closest('a[href*="#login"]');
+  if (target) {
+    e.preventDefault();
+    window.openAuthModal();
+    return;
+  }
+
+  // Modal arka planına tıklandıysa kapat
   const modal = document.getElementById("auth-modal");
-  if (e.target === modal) window.closeAuthModal();
+  if (e.target === modal) {
+    window.closeAuthModal();
+  }
 });
 
 window.addEventListener("load", checkAuth);
