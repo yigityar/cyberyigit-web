@@ -32,3 +32,13 @@ collections:
       - {label: "Categories", name: "categories", widget: "list", required: false}
       - {label: "Tags", name: "tags", widget: "list", required: false}
       - {label: "Content", name: "body", widget: "markdown"}
+
+  - name: "pages"
+    label: "Sabit Sayfalar"
+    files:
+      - file: "content/about.md"
+        label: "Hakkımda (About)"
+        name: "about"
+        fields:
+          - {label: "Başlık", name: "title", widget: "string"}
+          - {label: "İçerik", name: "body", widget: "markdown"}
