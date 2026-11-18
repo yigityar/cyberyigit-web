@@ -1,7 +1,7 @@
 ---
 title: Crear un sitio web sobre Seguridad de Informatica.
 date: 2026-11-18T14:11:00
-draft: false
+draft: true
 categories:
   - Espanol, ciberseguridad, Sitio Web
 tags:
