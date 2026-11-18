@@ -12,13 +12,12 @@ collections:
     folder: "content/posts"
     create: true
     slug: "{{slug}}"
-    filter: {field: "draft", value: false}
     fields:
       - {label: "Başlık", name: "title", widget: "string"}
       - {label: "Tarih", name: "date", widget: "datetime"}
       - {label: "Taslak mı?", name: "draft", widget: "boolean", default: false}
-      - {label: "Kategoriler", name: "categories", widget: "list"}
-      - {label: "Etiketler", name: "tags", widget: "list"}
+      - {label: "Kategoriler", name: "categories", widget: "list", required: false}
+      - {label: "Etiketler", name: "tags", widget: "list", required: false}
       - {label: "İçerik", name: "body", widget: "markdown"}
 
   - name: "posts_en"
@@ -26,11 +25,10 @@ collections:
     folder: "content/posts"
     create: true
     slug: "{{slug}}.en"
-    filter: {field: "draft", value: false}
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Draft", name: "draft", widget: "boolean", default: false}
-      - {label: "Categories", name: "categories", widget: "list"}
-      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Categories", name: "categories", widget: "list", required: false}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
       - {label: "Content", name: "body", widget: "markdown"}
