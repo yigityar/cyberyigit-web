@@ -9,7 +9,7 @@ public_folder: "/images"
 collections:
   - name: "posts_tr"
     label: "Türkçe Yazılar"
-    folder: "content/posts"
+    folder: "content/posts/tr"
     create: true
     slug: "{{slug}}"
     fields:
@@ -22,9 +22,9 @@ collections:
 
   - name: "posts_en"
     label: "İngilizce Yazılar"
-    folder: "content/posts"
+    folder: "content/posts/en"
     create: true
-    slug: "{{slug}}.en"
+    slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Date", name: "date", widget: "datetime"}
