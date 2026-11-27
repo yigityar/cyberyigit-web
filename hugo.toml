@@ -1,6 +1,7 @@
 baseURL = 'https://cyberyigit.com/'
 theme = 'PaperMod'
 defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = false
 
 [markup]
   [markup.goldmark]
@@ -8,42 +9,11 @@ defaultContentLanguage = 'en'
       unsafe = true
 
 [languages]
-  [languages.tr]
-    languageName = "TR"
-    languageCode = "tr-tr"
-    title = "CyberYigit | Siber Güvenlik & Lab Notları"
-    weight = 1
-    [languages.tr.params]
-      description = "Siber güvenlik araştırmaları, DFIR, sızma testi ve teknik lab notları."
-      author = "Yiğit"
-      defaultTheme = "dark"
-      disableThemeToggle = false
-      ShowReadingTime = true
-      ShowCodeCopyButtons = true
-      [languages.tr.params.homeInfoParams]
-        Title = "CyberYigit 🛡️"
-        Content = "Siber güvenlik araştırmaları, hands-on lab notları ve dijital adli bilişim analizleri. Sistemlerin nasıl çalıştığını, nasıl kırıldığını ve nasıl savunulduğunu belgeliyorum."
-    [[languages.tr.menu.main]]
-      identifier = "posts"
-      name = "Lab Notları"
-      url = "/posts/"
-      weight = 10
-    [[languages.tr.menu.main]]
-      identifier = "about"
-      name = "Hakkımda & Hizmetler"
-      url = "/about/"
-      weight = 20
-    [[languages.tr.menu.main]]
-      identifier = "auth"
-      name = "Giriş Yap"
-      url = "#login"
-      weight = 30
-
   [languages.en]
     languageName = "EN"
     languageCode = "en-us"
     title = "CyberYigit | Cybersecurity & Field Notes"
-    weight = 2
+    weight = 1
     [languages.en.params]
       description = "Cybersecurity research, DFIR, penetration testing, and field notes."
       author = "Yigit"
@@ -57,15 +27,46 @@ defaultContentLanguage = 'en'
     [[languages.en.menu.main]]
       identifier = "posts"
       name = "Field Notes"
-      url = "/en/posts/"
+      url = "/posts/"
       weight = 10
     [[languages.en.menu.main]]
       identifier = "about"
       name = "About & Services"
-      url = "/en/about/"
+      url = "/about/"
       weight = 20
     [[languages.en.menu.main]]
       identifier = "auth"
       name = "Login"
+      url = "#login"
+      weight = 30
+
+  [languages.tr]
+    languageName = "TR"
+    languageCode = "tr-tr"
+    title = "CyberYigit | Siber Güvenlik & Lab Notları"
+    weight = 2
+    [languages.tr.params]
+      description = "Siber güvenlik araştırmaları, DFIR, sızma testi ve teknik lab notları."
+      author = "Yiğit"
+      defaultTheme = "dark"
+      disableThemeToggle = false
+      ShowReadingTime = true
+      ShowCodeCopyButtons = true
+      [languages.tr.params.homeInfoParams]
+        Title = "CyberYigit 🛡️"
+        Content = "Siber güvenlik araştırmaları, hands-on lab notları ve dijital adli bilişim analizleri. Sistemlerin nasıl çalıştığını, nasıl kırıldığını ve nasıl savunulduğunu belgeliyorum."
+    [[languages.tr.menu.main]]
+      identifier = "posts"
+      name = "Lab Notları"
+      url = "/tr/posts/"
+      weight = 10
+    [[languages.tr.menu.main]]
+      identifier = "about"
+      name = "Hakkımda & Hizmetler"
+      url = "/tr/about/"
+      weight = 20
+    [[languages.tr.menu.main]]
+      identifier = "auth"
+      name = "Giriş Yap"
       url = "#login"
       weight = 30
