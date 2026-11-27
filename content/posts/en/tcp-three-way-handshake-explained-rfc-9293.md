@@ -10,7 +10,23 @@ tags:
 
 Before a single byte of application data crosses the network, TCP synchronizes both endpoints through the **Three-Way Handshake** defined in RFC 9293. 
 
-[https://youtu.be/RbB_XT_upzA?si=RMqqX7DrRSEFHSYr](https://youtu.be/RbB_XT_upzA?si=RMqqX7DrRSEFHSYr)
+\<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 10px; margin: 1.5rem 0;">
+
+  \<iframe
+
+    src="https://www.youtube-nocookie.com/embed/RbB_XT_upzA"
+
+    title="TCP Three-Way Handshake (RFC 9293)"
+
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+
+    allowfullscreen>
+
+  \</iframe>
+
+\</div>
 
 Handshake Flow & State Transitions 
 
