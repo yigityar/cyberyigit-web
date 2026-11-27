@@ -1,6 +1,6 @@
 ---
 title: TCP Three-Way Handshake Explained (RFC 9293)
-date: 2026-11-27T11:03:00
+date: 2026-11-25T11:03:00
 draft: false
 categories:
   - Networking, Cybersecurity
