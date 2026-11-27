@@ -1,6 +1,6 @@
 baseURL = 'https://cyberyigit.com/'
 theme = 'PaperMod'
-defaultContentLanguage = 'tr'
+defaultContentLanguage = 'en'
 
 [markup]
   [markup.goldmark]
